@@ -1,3 +1,11 @@
+## HTML & JS
+```html
+<script src="path/filName.js"></script>
+```
+This tag enable developer to get document object in js file
+bcause html file load js file.
+And then, brower enable you to access document object
+
 ## document.querySelector(param)
 querySelector method can search element to css way
 Getting first element based tag and class
