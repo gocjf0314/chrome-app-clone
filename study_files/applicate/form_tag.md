@@ -1,6 +1,7 @@
 ## Form Tag
 - If you dont press on button in form tag and then just enter, Content is submitted automatically.
 - Of course, It is summitted when you press the button.
+- default behavior: refresh page
 ```html
 ...
     <form id="login-form">
@@ -28,7 +29,6 @@ const loginInput = document.querySelector(`#${id} input`);
 function onLoginSubmit(event) {
   // prevent canceling input value
   // More exactly, do default behavior of event
-  // this default behavior: refresh page
   event.preventDefault();
   console.log(event);
   alert("Submit " + event);
