@@ -1,8 +1,10 @@
-const id = "login-form";
+const FORM_ID = "login-form";
+const HIDEN_CLASSNAME = "hidden";
 
-const loginForm = document.querySelector(`#${id}`);
-const loginInput = document.querySelector(`#${id} input`);
-const link = document.querySelector("a");
+const loginForm = document.querySelector(`#${FORM_ID}`);
+const loginInput = document.querySelector(`#${FORM_ID} input`);
+const greeting = document.querySelector("#greeting");
+// const link = document.querySelector("a");
 
 /**
  *
@@ -10,18 +12,20 @@ const link = document.querySelector("a");
  */
 function onLoginSubmit(event) {
   event.preventDefault();
-  console.log(event);
-  alert("Submit " + event);
+  loginForm.classList.add(HIDEN_CLASSNAME);
+  const username = loginInput.value;
+  greeting.innerText = `Hello ${username}`;
+  greeting.classList.remove(HIDEN_CLASSNAME);
 }
 
-/**
- * @param {PointerEvent} event
- */
-function onLinkClick(event) {
-  event.preventDefault();
-  console.dir(event);
-  // alert("clicked!");
-}
+// /**
+//  * @param {PointerEvent} event
+//  */
+// function onLinkClick(event) {
+//   event.preventDefault();
+//   console.dir(event);
+//   // alert("clicked!");
+// }
 
 loginForm.addEventListener("submit", onLoginSubmit);
-link.addEventListener("click", onLinkClick);
+// link.addEventListener("click", onLinkClick);
