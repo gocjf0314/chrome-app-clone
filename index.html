@@ -7,6 +7,7 @@
     <title>Momentum App</title>
   </head>
   <body>
+    <h2 id="clock"></h2>
     <form id="login-form" class="hidden">
       <input
         required
@@ -17,8 +18,11 @@
       />
       <button>Log in</button>
     </form>
-    <h2 id="clock"></h2>
     <h1 id="greeting" class="hidden"></h1>
+    <form id="todo-form">
+      <input type="text", placeholder="Write a TO DO and Press Ennter" required>
+    </form>
+    <ul id="todo-list"></ul>
     <div id="quote">
       <span id="quote-content">content</span>
       <span id="quote-author">author</span>
@@ -27,5 +31,6 @@
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
   </body>
 </html>

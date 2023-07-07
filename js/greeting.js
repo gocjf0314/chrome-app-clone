@@ -7,12 +7,8 @@ const loginInput = document.querySelector(`#${FORM_ID} input`);
 const greeting = document.querySelector("#greeting");
 const savedUsername = localStorage.getItem(USERNAME_KEY);
 
-initializeDocument();
-
-function initializeDocument() {
-  initListeners();
-  loadUsername();
-}
+loadUsername();
+initListeners();
 
 function initListeners() {
   loginForm.addEventListener("submit", onLoginSubmit);
